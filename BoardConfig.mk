@@ -21,15 +21,15 @@
 # definition file).
 #
 
-PLATFORM_PATH := device/zte-nubia/axon7
+DEVICE_PATH := device/zte-nubia/axon7
 
-TARGET_SPECIFIC_HEADER_PATH := $(PLATFORM_PATH)/include
+TARGET_SPECIFIC_HEADER_PATH := $(DEVICE_PATH)/include
 
 # Inherit from common msm8996-common
 -include device/zte-nubia/msm8996-common/BoardConfigCommon.mk
 
 # Assertions
-TARGET_BOARD_INFO_FILE ?= device/zte/axon7/board-info.txt
+TARGET_BOARD_INFO_FILE ?= device/zte-nubia/axon7/board-info.txt
 TARGET_OTA_ASSERT_DEVICE := ailsa_ii,axon7
 
 # Bootloader
@@ -120,7 +120,7 @@ VENDOR_SECURITY_PATCH := 2018-07-01
 
 # SELinux
 include device/qcom/sepolicy-legacy-um/sepolicy.mk
-BOARD_SEPOLICY_DIRS += $(PLATFORM_PATH)/sepolicy
+BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy
 SELINUX_IGNORE_NEVERALLOWS := true
 
 # inherit from the proprietary version
