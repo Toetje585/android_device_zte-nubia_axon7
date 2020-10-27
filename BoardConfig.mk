@@ -122,12 +122,5 @@ VENDOR_SECURITY_PATCH := 2018-07-01
 BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy
 SELINUX_IGNORE_NEVERALLOWS := true
 
-# properties
-PRODUCT_FULL_TREBLE_OVERRIDE := true
-BOARD_PROPERTY_OVERRIDES_SPLIT_ENABLED := true
-
-# vndk
-BOARD_VNDK_RUNTIME_DISABLE := true
-
 # inherit from the proprietary version
 -include vendor/zte-nubia/axon7/BoardConfigVendor.mk
